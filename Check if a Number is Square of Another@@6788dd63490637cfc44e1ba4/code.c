@@ -4,8 +4,8 @@ int main(){
     int a;
     scanf("%d",&a);
     b=a**2;
-    if(b==a)
-    printf("Yrs");
+    if(b=a)
+    printf("Yes");
     else
     printf("No");
     return 0;
