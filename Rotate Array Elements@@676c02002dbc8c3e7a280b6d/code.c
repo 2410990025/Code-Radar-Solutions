@@ -1,24 +1,23 @@
-// Your code here...
 #include <stdio.h>
-int main(){
-    int n;
-    scanf("%d",&n);
-    int arr[n];
-    for(int i=0;i<n;i++){
-        scanf("%d",&arr[i]);
+void RotateClockWise(int n, int arr[],int k){
+    k=k%n;
+    for(int i=n-k;i<n;i++){
+        printf("%d ",arr[i]);
     }
-    int k;
-    scanf("%d",&k);
-    for (int i=0;i<n;i++){
-        printf("%d",rotatearray(arr,n,k));
+    for(int j=0;j<n-k;j++){
+        printf("%d ",arr[j]);
     }
 }
-void rotatearray(int arr[],int n,int k){
-    k=k%n;
-    for(int i=k;i<n;i++){
-        for(int j=0;j<n-k;j++){
-            printf("%d",arr[j]);
-        }
-        printf("\n");
+int main() {
+    int n,k;
+    printf("enter size:");
+    scanf("%d",&n);
+    int arr[n];
+    printf("enter value:");
+    for(int i=0;i<n;i++){        
+        scanf("%d",&arr[i]);
     }
+    printf("enter k:");
+    scanf("%d",&k);
+    RotateClockWise(n,arr,k);
 }
